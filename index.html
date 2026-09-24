@@ -36,25 +36,63 @@
       <section class="opt-in enrollment" aria-labelledby="enrollment-heading">
         <h2 id="enrollment-heading">SMS Enrollment</h2>
         <p>
-          Text <strong class="keyword">START</strong> to
+          Authorized users enroll below. Enter your mobile number and check the
+          SMS consent box (unchecked by default). After submitting, text
+          <strong class="keyword">START</strong> to
           <a href="sms:+13019003525&body=START">(301) 900-3525</a>
-          to begin enrollment. You'll be asked to reply
-          <strong class="keyword">Y</strong> to confirm. Message frequency
-          varies. Msg &amp; data rates may apply. Reply
-          <strong>HELP</strong> for help or <strong>STOP</strong> to opt out.
-          By enrolling, you agree to the
-          <a
-            href="https://agentjohnsmith.github.io/privacy.html"
-            >Privacy Policy</a
-          >
-          and
-          <a href="https://agentjohnsmith.github.io/terms.html"
-            >SMS Terms &amp; Conditions</a
-          >.
+          from that number, then reply <strong class="keyword">Y</strong> to
+          confirm enrollment.
         </p>
-        <p class="cta-wrap">
-          <a class="cta" href="sms:+13019003525&body=START">Text START</a>
-        </p>
+
+        <form
+          class="sms-consent-form"
+          id="sms-consent-form"
+          action="https://agentjohnsmith.github.io/"
+          method="get"
+        >
+          <div class="field">
+            <label for="mobile-phone">Mobile phone number</label>
+            <input
+              id="mobile-phone"
+              name="phone"
+              type="tel"
+              inputmode="tel"
+              autocomplete="tel"
+              required
+              placeholder="(555) 555-5555"
+            />
+          </div>
+
+          <div class="field consent-field">
+            <label class="consent-label" for="sms-consent">
+              <input
+                id="sms-consent"
+                name="sms_consent"
+                type="checkbox"
+                value="yes"
+                required
+              />
+              <span>
+                I consent to receive recurring personal-assistant SMS messages
+                from Agent John Smith at the phone number provided. Message
+                frequency varies. Msg &amp; data rates may apply. Reply HELP for
+                help or STOP to opt out.
+                <a href="https://agentjohnsmith.github.io/privacy.html"
+                  >Privacy Policy</a
+                >
+                |
+                <a href="https://agentjohnsmith.github.io/terms.html"
+                  >SMS Terms &amp; Conditions</a
+                >.
+              </span>
+            </label>
+          </div>
+
+          <button class="cta" type="submit">Continue enrollment</button>
+        </form>
+
+        <p id="enrollment-next" class="enrollment-next" hidden></p>
+
         <nav class="legal-links" aria-label="SMS legal documents">
           <a href="https://agentjohnsmith.github.io/privacy.html"
             >Privacy Policy</a
@@ -159,5 +197,24 @@
         <p>Agent John Smith &middot; personal use SMS assistant</p>
       </footer>
     </main>
+    <script>
+      (function () {
+        var form = document.getElementById("sms-consent-form");
+        var next = document.getElementById("enrollment-next");
+        if (!form || !next) return;
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          var phone = document.getElementById("mobile-phone");
+          var consent = document.getElementById("sms-consent");
+          if (!phone || !consent || !consent.checked) return;
+          next.hidden = false;
+          next.textContent =
+            "Consent recorded for " +
+            phone.value.trim() +
+            ". To finish enrollment, text START to (301) 900-3525 from that number, then reply Y when prompted.";
+          window.location.href = "sms:+13019003525&body=START";
+        });
+      })();
+    </script>
   </body>
 </html>
