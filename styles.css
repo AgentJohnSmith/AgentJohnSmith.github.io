@@ -285,6 +285,10 @@ a:focus-visible {
   line-height: 1.45;
 }
 
+.enroll-check label a {
+  word-break: break-all;
+}
+
 .enroll-button {
   font-family: var(--font-display);
 }
