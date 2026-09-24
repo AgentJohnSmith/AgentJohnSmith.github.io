@@ -27,11 +27,66 @@
 
         <p class="enroll-keyword">
           Text <strong class="keyword">START</strong> to
-          <a href="sms:+13019003525&body=START"
+          <a href="sms:+13019003525?&amp;body=START"
             ><strong>(301) 900-3525</strong></a
           >
-          to opt in.
+          to opt in, or use the form below.
         </p>
+
+        <form id="enroll-form" class="enroll-form" action="#" novalidate>
+          <p>
+            <label for="phone_number">Mobile phone number</label><br />
+            <input
+              type="tel"
+              id="phone_number"
+              name="phone_number"
+              autocomplete="tel"
+              inputmode="tel"
+            />
+          </p>
+
+          <p class="enroll-check">
+            <input
+              type="checkbox"
+              id="sms_opt_in"
+              name="sms_opt_in"
+              value="yes"
+            />
+            <label for="sms_opt_in">
+              By checking this box, I agree to receive recurring
+              personal-assistant text messages from Agent John Smith at the
+              mobile phone number entered above, including reminders,
+              smart-home alerts, summaries, system status notifications, and
+              responses to my commands. I will be asked to reply Y to confirm.
+              Message frequency varies. Message and data rates may apply. Reply
+              HELP for help. Reply STOP to opt out.
+            </label>
+          </p>
+
+          <p class="enroll-links">
+            <a href="https://agentjohnsmith.github.io/privacy.html"
+              >Privacy Policy</a
+            >
+            <span class="link-sep" aria-hidden="true">|</span>
+            <a href="https://agentjohnsmith.github.io/terms.html"
+              >SMS Terms &amp; Conditions</a
+            >
+          </p>
+
+          <p>
+            <button type="submit" class="enroll-button">
+              Continue: text START
+            </button>
+          </p>
+
+          <p class="enroll-note">
+            Submitting opens your messaging app with START addressed to
+            (301) 900-3525. Send that text from the number you entered to
+            request enrollment. This website does not store your phone number.
+          </p>
+        </form>
+
+        <p id="enroll-status" class="enroll-status" role="status" hidden></p>
 
         <p class="enroll-terms">
           By texting START to (301) 900-3525, you agree to receive recurring
@@ -49,10 +104,6 @@
           >
         </p>
 
-        <p class="cta-wrap">
-          <a class="cta" href="sms:+13019003525&body=START">Text START</a>
-        </p>
-
         <p class="enroll-urls">
           Privacy Policy:
           <a href="https://agentjohnsmith.github.io/privacy.html"
@@ -65,5 +116,6 @@
         </p>
       </section>
     </main>
+    <script src="enroll.js"></script>
   </body>
 </html>
