@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Agent John Smith — SMS Personal Assistant</title>
+    <meta
+      name="description"
+      content="Opt in to Agent John Smith SMS notifications. Text START to (301) 900-3525 for reminders, Home Assistant alerts, summaries, and command responses."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="atmosphere" aria-hidden="true"></div>
+
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">SMS personal assistant</p>
+        <h1 class="brand">Agent John Smith</h1>
+        <p class="lede">
+          A personal assistant service that sends reminders, Home Assistant
+          alerts, summaries, system status notifications, and responses to user
+          commands via SMS.
+        </p>
+        <p class="phone">
+          <a class="phone-link" href="tel:+13019003525">(301) 900-3525</a>
+        </p>
+      </header>
+
+      <section class="opt-in" aria-labelledby="opt-in-heading">
+        <h2 id="opt-in-heading">How to opt in</h2>
+        <p>
+          Text <strong class="keyword">START</strong> to
+          <a href="sms:+13019003525&body=START">(301) 900-3525</a>
+          to subscribe to Agent John Smith messages.
+        </p>
+        <p class="cta-wrap">
+          <a class="cta" href="sms:+13019003525&body=START">Text START</a>
+        </p>
+        <p class="fine-print">
+          Message frequency varies. Msg &amp; data rates may apply. Reply
+          <strong>HELP</strong> for help or <strong>STOP</strong> to opt out.
+        </p>
+      </section>
+
+      <section class="messages" aria-labelledby="messages-heading">
+        <h2 id="messages-heading">Sample message exchange</h2>
+        <p class="section-note">
+          Exact messages exchanged during opt-in, help, and opt-out:
+        </p>
+
+        <figure class="thread">
+          <div class="bubble user">
+            <span class="who">User</span>
+            <p>START</p>
+          </div>
+          <div class="bubble agent">
+            <span class="who">Agent John Smith</span>
+            <p>
+              Welcome to Agent John Smith! You'll receive personal assistant
+              notifications, including reminders, smart-home alerts, summaries,
+              system updates, and responses to your commands. Message frequency
+              varies. Msg &amp; data rates may apply. Reply HELP for help or STOP
+              to opt out.
+            </p>
+          </div>
+          <div class="bubble user">
+            <span class="who">User</span>
+            <p>HELP</p>
+          </div>
+          <div class="bubble agent">
+            <span class="who">Agent John Smith</span>
+            <p>
+              Agent John Smith help: This service provides personal assistant
+              notifications and responses via SMS. For support, visit
+              <a href="https://agentjohnsmith.github.io/"
+                >https://agentjohnsmith.github.io/</a
+              >. Reply STOP to opt out.
+            </p>
+          </div>
+          <div class="bubble user">
+            <span class="who">User</span>
+            <p>STOP</p>
+          </div>
+          <div class="bubble agent">
+            <span class="who">Agent John Smith</span>
+            <p>
+              You have opted out of Agent John Smith messages. You will receive
+              no further messages.
+            </p>
+          </div>
+        </figure>
+      </section>
+
+      <footer class="footer">
+        <p>
+          Support:
+          <a href="https://agentjohnsmith.github.io/"
+            >https://agentjohnsmith.github.io/</a
+          >
+        </p>
+        <p>Agent John Smith &middot; personal use SMS assistant</p>
+      </footer>
+    </main>
+  </body>
+</html>
