@@ -197,33 +197,33 @@ a:focus-visible {
   outline: none;
 }
 
-.legal-links {
+.enroll-links {
   display: block;
   margin: var(--space-md) 0 0;
   font-size: 1.05rem;
   font-weight: 600;
 }
 
-.legal-links a {
+.enroll-links a {
   color: var(--teal);
   text-decoration: underline;
   text-underline-offset: 0.18em;
 }
 
-.legal-sep {
+.link-sep {
   margin: 0 0.55rem;
   color: var(--ink-soft);
   font-weight: 400;
 }
 
-.legal-urls {
+.enroll-urls {
   margin: var(--space-sm) 0 0;
   font-size: 0.92rem;
   color: var(--ink-soft);
   line-height: 1.7;
 }
 
-.legal-urls a {
+.enroll-urls a {
   word-break: break-all;
 }
 
@@ -232,98 +232,6 @@ a:focus-visible {
   border-radius: 4px;
   padding: var(--space-lg);
   background: oklch(0.98 0.008 210 / 0.7);
-}
-
-.enrollment input[type="text"],
-.enrollment input[type="tel"] {
-  width: 100%;
-  max-width: 22rem;
-  padding: 0.75rem 0.9rem;
-  font: inherit;
-  color: var(--ink);
-  background: oklch(0.99 0.005 210);
-  border: 1px solid var(--line);
-  border-radius: 2px;
-}
-
-.enrollment input[type="checkbox"] {
-  width: 1.15rem;
-  height: 1.15rem;
-  margin-right: 0.5rem;
-  vertical-align: middle;
-  accent-color: var(--teal);
-}
-
-.enrollment button.cta,
-.enrollment button[type="submit"] {
-  display: inline-block;
-  padding: 0.85rem 1.5rem;
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: oklch(0.98 0.01 210);
-  background: var(--teal);
-  border: 0;
-  border-radius: 2px;
-  cursor: pointer;
-}
-
-.sms-consent-form {
-  margin-top: var(--space-md);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
-}
-
-.field label,
-.consent-label {
-  display: block;
-  font-weight: 600;
-  color: var(--ink);
-  margin-bottom: var(--space-xs);
-}
-
-.field input[type="tel"] {
-  width: 100%;
-  padding: 0.75rem 0.9rem;
-  font: inherit;
-  color: var(--ink);
-  background: oklch(0.99 0.005 210);
-  border: 1px solid var(--line);
-  border-radius: 2px;
-}
-
-.field input[type="tel"]:focus-visible {
-  outline: 2px solid var(--teal);
-  outline-offset: 2px;
-}
-
-.consent-field {
-  margin-top: var(--space-xs);
-}
-
-.consent-label {
-  display: flex;
-  gap: 0.75rem;
-  align-items: flex-start;
-  font-weight: 400;
-  color: var(--ink-soft);
-  line-height: 1.45;
-}
-
-.consent-label input[type="checkbox"] {
-  flex: 0 0 auto;
-  width: 1.15rem;
-  height: 1.15rem;
-  margin-top: 0.2rem;
-  accent-color: var(--teal);
-}
-
-.sms-consent-form .cta {
-  align-self: flex-start;
-  border: 0;
-  cursor: pointer;
-  font: inherit;
 }
 
 .text-cta {
@@ -339,21 +247,13 @@ a:focus-visible {
   text-decoration-color: var(--teal);
 }
 
-.consent-disclosure {
+.enroll-terms {
   margin: var(--space-md) 0;
   padding: var(--space-sm) var(--space-md);
   border: 1px solid var(--line);
   background: var(--agent-bg);
   color: var(--ink-soft);
   font-size: 0.98rem;
-}
-
-.enrollment-next {
-  margin: var(--space-md) 0 0;
-  padding: var(--space-sm) var(--space-md);
-  background: var(--agent-bg);
-  border: 1px solid var(--line);
-  color: var(--ink);
 }
 
 .thread {
