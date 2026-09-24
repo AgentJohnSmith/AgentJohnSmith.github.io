@@ -255,6 +255,32 @@ a:focus-visible {
   margin: 0 0 var(--space-xs);
 }
 
+.doc .doc-title {
+  font-size: clamp(2rem, 6vw, 2.75rem);
+}
+
+.doc section {
+  margin-top: var(--space-lg);
+}
+
+.doc section h2 {
+  margin-bottom: var(--space-xs);
+}
+
+.doc p,
+.doc li {
+  color: var(--ink-soft);
+}
+
+.doc ul {
+  margin: 0 0 var(--space-md);
+  padding-left: 1.25rem;
+}
+
+.doc li {
+  margin-bottom: var(--space-xs);
+}
+
 @keyframes rise {
   from {
     opacity: 0;
