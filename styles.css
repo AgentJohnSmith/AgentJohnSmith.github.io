@@ -326,6 +326,15 @@ a:focus-visible {
   font: inherit;
 }
 
+.consent-disclosure {
+  margin: var(--space-md) 0;
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--line);
+  background: var(--agent-bg);
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+}
+
 .enrollment-next {
   margin: var(--space-md) 0 0;
   padding: var(--space-sm) var(--space-md);
