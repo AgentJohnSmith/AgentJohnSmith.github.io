@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SMS Opt-In — Agent John Smith</title>
+    <meta
+      name="description"
+      content="Opt in to Agent John Smith SMS messages. Enter your phone number and consent to receive texts."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="atmosphere" aria-hidden="true"></div>
+    <main class="page">
+      <p class="eyebrow"><a href="/">Agent John Smith</a></p>
+      <h1 class="brand doc-title">SMS Opt-In</h1>
+      <p class="lede">
+        Use this form to give Agent John Smith permission to text the phone
+        number you enter. Message frequency varies. Msg &amp; data rates may
+        apply.
+      </p>
+
+      <section class="enrollment">
+        <h2>SMS consent form</h2>
+
+        <form id="optInForm" name="optInForm" method="post" action="#">
+          <p>
+            <label for="phone_number">Phone Number</label><br />
+            <input
+              type="text"
+              id="phone_number"
+              name="phone_number"
+              autocomplete="tel"
+              required
+            />
+          </p>
+
+          <p>
+            <input type="checkbox" id="sms_consent" name="sms_consent" value="yes" />
+            <label for="sms_consent">
+              I agree to receive recurring SMS messages from Agent John Smith at
+              the Phone Number provided above. Message frequency varies. Msg
+              &amp; data rates may apply. Reply HELP for help or STOP to opt
+              out. Consent is not required as a condition of purchasing any
+              property, goods, or services.
+              <a href="https://agentjohnsmith.github.io/privacy.html"
+                >Privacy Policy</a
+              >
+              |
+              <a href="https://agentjohnsmith.github.io/terms.html"
+                >SMS Terms &amp; Conditions</a
+              >
+            </label>
+          </p>
+
+          <p>
+            <button type="submit">Opt in to SMS</button>
+          </p>
+        </form>
+
+        <p id="optInResult" hidden></p>
+
+        <p>
+          <a href="https://agentjohnsmith.github.io/privacy.html"
+            >Privacy Policy</a
+          >
+          |
+          <a href="https://agentjohnsmith.github.io/terms.html"
+            >SMS Terms &amp; Conditions</a
+          >
+        </p>
+        <p>
+          Privacy Policy:
+          <a href="https://agentjohnsmith.github.io/privacy.html"
+            >https://agentjohnsmith.github.io/privacy.html</a
+          ><br />
+          SMS Terms &amp; Conditions:
+          <a href="https://agentjohnsmith.github.io/terms.html"
+            >https://agentjohnsmith.github.io/terms.html</a
+          >
+        </p>
+      </section>
+    </main>
+    <script>
+      document.getElementById("optInForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+        var phone = document.getElementById("phone_number").value.trim();
+        var consent = document.getElementById("sms_consent").checked;
+        var result = document.getElementById("optInResult");
+        if (!phone) {
+          result.hidden = false;
+          result.textContent = "Please enter a Phone Number.";
+          return;
+        }
+        if (!consent) {
+          result.hidden = false;
+          result.textContent =
+            "Please check the SMS consent box to opt in at the Phone Number provided.";
+          return;
+        }
+        result.hidden = false;
+        result.textContent =
+          "SMS consent recorded for " +
+          phone +
+          ". Text START to (301) 900-3525 from that number, then reply Y to finish enrollment.";
+      });
+    </script>
+  </body>
+</html>
