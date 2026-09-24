@@ -37,8 +37,9 @@
         <h2 id="opt-in-heading">How to opt in</h2>
         <p>
           Text <strong class="keyword">START</strong> to
-          <a href="sms:+13019003525&body=START">(301) 900-3525</a>
-          to subscribe to Agent John Smith messages.
+          <a href="sms:+13019003525&body=START">(301) 900-3525</a>.
+          You will receive a confirmation request; reply
+          <strong class="keyword">Y</strong> to complete enrollment.
         </p>
         <p class="cta-wrap">
           <a class="cta" href="sms:+13019003525&body=START">Text START</a>
@@ -52,7 +53,8 @@
       <section class="messages" aria-labelledby="messages-heading">
         <h2 id="messages-heading">Sample message exchange</h2>
         <p class="section-note">
-          Exact messages exchanged during opt-in, help, and opt-out:
+          Exact messages exchanged during opt-in (confirmation request, then
+          enrollment), help, and opt-out:
         </p>
 
         <figure class="thread">
@@ -63,11 +65,25 @@
           <div class="bubble agent">
             <span class="who">Agent John Smith</span>
             <p>
-              Welcome to Agent John Smith! You'll receive personal assistant
-              notifications, including reminders, smart-home alerts, summaries,
-              system updates, and responses to your commands. Message frequency
-              varies. Msg &amp; data rates may apply. Reply HELP for help or STOP
-              to opt out.
+              Agent John Smith: Reply Y to confirm enrollment in personal
+              assistant SMS notifications, including reminders, smart-home
+              alerts, summaries, system updates, and responses to your
+              commands. Message frequency varies. Msg &amp; data rates may
+              apply. Reply STOP to cancel.
+            </p>
+          </div>
+          <div class="bubble user">
+            <span class="who">User</span>
+            <p>Y</p>
+          </div>
+          <div class="bubble agent">
+            <span class="who">Agent John Smith</span>
+            <p>
+              Welcome to Agent John Smith! You are enrolled. You'll receive
+              personal assistant notifications, including reminders, smart-home
+              alerts, summaries, system updates, and responses to your
+              commands. Message frequency varies. Msg &amp; data rates may
+              apply. Reply HELP for help or STOP to opt out.
             </p>
           </div>
           <div class="bubble user">
