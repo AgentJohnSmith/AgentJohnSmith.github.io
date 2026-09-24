@@ -326,6 +326,19 @@ a:focus-visible {
   font: inherit;
 }
 
+.text-cta {
+  margin: 0 0 var(--space-md);
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3.5vw, 1.8rem);
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+.text-cta a {
+  color: var(--ink);
+  text-decoration-color: var(--teal);
+}
+
 .consent-disclosure {
   margin: var(--space-md) 0;
   padding: var(--space-sm) var(--space-md);

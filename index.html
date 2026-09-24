@@ -35,99 +35,43 @@
 
       <section class="opt-in enrollment" aria-labelledby="enrollment-heading">
         <h2 id="enrollment-heading">SMS Enrollment</h2>
-        <p>
-          Enter your <strong>Phone Number</strong> and check the SMS consent box
-          below (unchecked by default) to give Agent John Smith permission to
-          text that number.
+
+        <p class="text-cta">
+          Text <strong class="keyword">START</strong> to
+          <a href="sms:+13019003525&body=START"
+            ><strong>(301) 900-3525</strong></a
+          >
+          to opt in.
         </p>
 
-        <form id="optInForm" name="optInForm" method="post" action="#">
-          <p>
-            <label for="phone_number">Phone Number</label><br />
-            <input
-              type="text"
-              id="phone_number"
-              name="phone_number"
-              autocomplete="tel"
-              required
-            />
-          </p>
-
-          <p class="consent-disclosure">
-            Program disclosure (shown before consent): Agent John Smith sends
-            recurring personal-assistant text messages, including reminders,
-            smart-home alerts, summaries, system status notifications, and
-            responses to user commands. Message frequency varies. Message and
-            data rates may apply. Reply STOP to opt out. Reply HELP for help.
-            <a href="https://agentjohnsmith.github.io/privacy.html"
-              >Privacy Policy</a
-            >
-            |
-            <a href="https://agentjohnsmith.github.io/terms.html"
-              >Terms and Conditions</a
-            >.
-          </p>
-
-          <p>
-            <input
-              type="checkbox"
-              id="sms_consent"
-              name="sms_consent"
-              value="yes"
-            />
-            <label for="sms_consent">
-              By checking this box, I agree to receive recurring
-              personal-assistant text messages from Agent John Smith at the
-              Phone Number provided above, including reminders, smart-home
-              alerts, summaries, system status notifications, and responses to
-              my commands. Message frequency varies. Message and data rates may
-              apply. Reply STOP to opt out.
-              <a href="https://agentjohnsmith.github.io/terms.html"
-                >Terms and Conditions</a
-              >
-              and
-              <a href="https://agentjohnsmith.github.io/privacy.html"
-                >Privacy Policy</a
-              >.
-            </label>
-          </p>
-
-          <p>
-            <button class="cta" type="submit">Opt in to SMS</button>
-          </p>
-        </form>
-
-        <p id="optInResult" class="enrollment-next" hidden></p>
-
-        <p>
-          After submitting this form, text
-          <strong class="keyword">START</strong> to
-          <a href="sms:+13019003525&body=START">(301) 900-3525</a>
-          from that Phone Number, then reply <strong class="keyword">Y</strong>
-          to complete enrollment.
-        </p>
-
-        <nav class="legal-links" aria-label="SMS legal documents">
+        <p class="consent-disclosure">
+          By texting START to (301) 900-3525, you agree to receive recurring
+          personal-assistant text messages from Agent John Smith, including
+          reminders, smart-home alerts, summaries, system status notifications,
+          and responses to your commands. You will be asked to reply Y to
+          confirm. Message frequency varies. Message and data rates may apply.
+          Reply HELP for help. Reply STOP to opt out.
           <a href="https://agentjohnsmith.github.io/privacy.html"
             >Privacy Policy</a
           >
-          <span class="legal-sep" aria-hidden="true">|</span>
+          |
           <a href="https://agentjohnsmith.github.io/terms.html"
-            >Terms and Conditions</a
+            >SMS Terms &amp; Conditions</a
           >
-        </nav>
+        </p>
+
+        <p class="cta-wrap">
+          <a class="cta" href="sms:+13019003525&body=START">Text START</a>
+        </p>
+
         <p class="legal-urls">
           Privacy Policy:
           <a href="https://agentjohnsmith.github.io/privacy.html"
             >https://agentjohnsmith.github.io/privacy.html</a
           ><br />
-          Terms and Conditions:
+          SMS Terms &amp; Conditions:
           <a href="https://agentjohnsmith.github.io/terms.html"
             >https://agentjohnsmith.github.io/terms.html</a
-          ><br />
-          Dedicated opt-in form:
-          <a href="https://agentjohnsmith.github.io/opt-in.html"
-            >https://agentjohnsmith.github.io/opt-in.html</a
           >
         </p>
       </section>
@@ -203,7 +147,7 @@
           >
           <span class="legal-sep" aria-hidden="true">|</span>
           <a href="https://agentjohnsmith.github.io/terms.html"
-            >Terms and Conditions</a
+            >SMS Terms &amp; Conditions</a
           >
         </p>
         <p>
@@ -215,33 +159,5 @@
         <p>Agent John Smith &middot; personal use SMS assistant</p>
       </footer>
     </main>
-    <script>
-      (function () {
-        var form = document.getElementById("optInForm");
-        var result = document.getElementById("optInResult");
-        if (!form || !result) return;
-        form.addEventListener("submit", function (event) {
-          event.preventDefault();
-          var phone = document.getElementById("phone_number").value.trim();
-          var consent = document.getElementById("sms_consent").checked;
-          if (!phone) {
-            result.hidden = false;
-            result.textContent = "Please enter a Phone Number.";
-            return;
-          }
-          if (!consent) {
-            result.hidden = false;
-            result.textContent =
-              "Please check the SMS consent box to opt in at the Phone Number provided.";
-            return;
-          }
-          result.hidden = false;
-          result.textContent =
-            "SMS consent recorded for " +
-            phone +
-            ". Text START to (301) 900-3525 from that number, then reply Y to finish enrollment.";
-        });
-      })();
-    </script>
   </body>
 </html>
