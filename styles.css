@@ -234,7 +234,7 @@ a:focus-visible {
   background: oklch(0.98 0.008 210 / 0.7);
 }
 
-.text-cta {
+.enroll-keyword {
   margin: 0 0 var(--space-md);
   font-family: var(--font-display);
   font-size: clamp(1.4rem, 3.5vw, 1.8rem);
@@ -242,7 +242,7 @@ a:focus-visible {
   color: var(--ink);
 }
 
-.text-cta a {
+.enroll-keyword a {
   color: var(--ink);
   text-decoration-color: var(--teal);
 }
