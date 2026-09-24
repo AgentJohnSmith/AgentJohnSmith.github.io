@@ -197,9 +197,29 @@ a:focus-visible {
   outline: none;
 }
 
-.fine-print {
-  font-size: 0.92rem;
+.legal-links {
+  margin: var(--space-md) 0 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.legal-links a {
+  color: var(--teal);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.legal-sep {
+  margin: 0 0.55rem;
   color: var(--ink-soft);
+  font-weight: 400;
+}
+
+.enrollment {
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: var(--space-lg);
+  background: oklch(0.98 0.008 210 / 0.7);
 }
 
 .thread {
