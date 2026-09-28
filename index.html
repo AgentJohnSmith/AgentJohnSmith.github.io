@@ -44,6 +44,12 @@
           to opt in, or use the form below.
         </p>
 
+        <p class="enroll-optional">
+          SMS enrollment is optional. Consent to receive text messages is not a
+          condition of using this website, using any Agent John Smith service,
+          or making any purchase. You can skip SMS enrollment at any time.
+        </p>
+
         <form id="enroll-form" class="enroll-form" action="#" novalidate>
           <p>
             <label for="phone_number">Mobile phone number</label><br />
@@ -64,7 +70,7 @@
               value="yes"
             />
             <label for="sms_opt_in">
-              By checking this box, I agree to receive recurring
+              <strong>(Optional)</strong> By checking this box, I agree to receive recurring
               personal-assistant text messages from Agent John Smith at the
               mobile phone number entered above, including reminders,
               smart-home alerts, summaries, system status notifications, and
@@ -86,12 +92,17 @@
             <button type="submit" class="enroll-button">
               Continue: text START
             </button>
+            <button type="button" id="enroll-skip" class="enroll-skip">
+              No thanks, skip text messages
+            </button>
           </p>
 
           <p class="enroll-note">
-            Submitting opens your messaging app with START addressed to
-            (301) 900-3525. Send that text from the number you entered to
-            request enrollment. This website does not store your phone number.
+            If you check the box and continue, your messaging app opens with
+            START addressed to (301) 900-3525. Send that text from the number
+            you entered to request enrollment. If you leave the box unchecked or
+            choose to skip, you will not be enrolled and no text messages will be
+            sent. This website does not store your phone number.
           </p>
         </form>
 

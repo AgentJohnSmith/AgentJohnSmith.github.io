@@ -18,7 +18,10 @@
       return;
     }
     if (!agreed) {
-      show("Check the box to agree to receive Agent John Smith text messages.");
+      show(
+        "You have not been enrolled, and no text messages will be sent. " +
+          "SMS enrollment is optional."
+      );
       return;
     }
 
@@ -30,4 +33,15 @@
     );
     window.location.href = "sms:+13019003525?&body=START";
   });
+
+  var skip = document.getElementById("enroll-skip");
+  if (skip) {
+    skip.addEventListener("click", function () {
+      document.getElementById("sms_opt_in").checked = false;
+      show(
+        "You chose not to receive text messages. You have not been enrolled, " +
+          "and no text messages will be sent."
+      );
+    });
+  }
 })();
