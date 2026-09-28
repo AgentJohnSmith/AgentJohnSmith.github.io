@@ -77,10 +77,6 @@ body {
   padding: var(--space-xl) 0 calc(var(--space-xl) * 1.2);
 }
 
-.hero {
-  animation: rise 0.7s ease-out both;
-}
-
 .eyebrow {
   margin: 0 0 var(--space-sm);
   font-size: 0.8rem;
@@ -133,11 +129,6 @@ body {
   margin-top: var(--space-xl);
   padding-top: var(--space-lg);
   border-top: 1px solid var(--line);
-  animation: rise 0.7s ease-out 0.12s both;
-}
-
-.messages {
-  animation-delay: 0.22s;
 }
 
 h2 {
@@ -398,7 +389,6 @@ a:focus-visible {
   border-top: 1px solid var(--line);
   font-size: 0.9rem;
   color: var(--ink-soft);
-  animation: rise 0.7s ease-out 0.32s both;
 }
 
 .footer p {
@@ -429,17 +419,6 @@ a:focus-visible {
 
 .doc li {
   margin-bottom: var(--space-xs);
-}
-
-@keyframes rise {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
